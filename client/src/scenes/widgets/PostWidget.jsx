@@ -47,6 +47,8 @@ const PostWidget = ({
     dispatch(setPost({ post: updatedPost }));
   };
 
+  const mainColor = "#00D5FA";
+
   return (
     <WidgetWrapper m="2rem 0">
       <Friend
@@ -55,9 +57,21 @@ const PostWidget = ({
         subtitle={location}
         userPicturePath={userPicturePath}
       />
-      <Typography color={main} sx={{ mt: "1rem" }}>
-        {description}
-      </Typography>
+       <Typography
+      color={mainColor}
+      sx={{
+        mt: "1rem",
+        fontSize: "1rem",
+        textAlign: "center",
+        fontWeight: 500,
+        lineHeight: 1.5,
+        letterSpacing: "0.5px",
+        color: "#00D5FA", // Adjust the color as needed
+        textShadow: "0 1px 2px rgba(0, 0, 0, 0.1)", // Add a subtle text shadow
+      }}
+    >
+      {description}
+    </Typography>
       {picturePath && (
         <img
           width="100%"
